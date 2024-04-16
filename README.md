@@ -26,3 +26,4 @@ Les contributions sous forme de pull requests sont les bienvenues. Pour des chan
 
 ## Auteurs 📝 
 - Mohamed Amine Berrdjem
+- Fourar-Laidi Hamza Nouffel
