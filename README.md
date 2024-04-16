@@ -28,3 +28,4 @@ Les contributions sous forme de pull requests sont les bienvenues. Pour des chan
 - Mohamed Amine Berrdjem
 - Fourar-Laidi Hamza Nouffel
 - Massinissa Idir Rahmani
+- Idir Kebbiche
