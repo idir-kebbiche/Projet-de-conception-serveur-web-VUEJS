@@ -23,3 +23,6 @@ L'objectif principal de ce projet est de créer un serveur web robuste et perfor
 ## Contributions et Remarques 🤝
 
 Les contributions sous forme de pull requests sont les bienvenues. Pour des changements majeurs, veuillez d'abord ouvrir un ticket pour discuter des modifications que vous souhaitez apporter.
+
+## Auteurs 📝 
+- Mohamed Amine Berrdjem
