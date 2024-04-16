@@ -1,0 +1,132 @@
+<!-- Gestion.vue -->
+
+<template>
+    <div>
+      <h1>Gestion du collège</h1>
+      <button @click="logout" class="logout-button">Déconnexion</button>
+      <div>
+        <!-- Ajoutez ici les composants pour gérer les enseignants -->
+        <ExamensManagement />
+      </div>
+      <div>
+        <!-- Ajoutez ici les composants pour gérer les classes -->
+        <AbsencesManagement />
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  // Importez ici les composants nécessaires
+  import ExamensManagement from '../components/ExamensManagement.vue'
+  import AbsencesManagement from '../components/AbsencesManagement.vue'
+  
+  export default {
+    name: 'Gestion',
+    components: {
+        ExamensManagement,
+        AbsencesManagement,
+    },
+    methods: {
+      logout() {
+        localStorage.removeItem('userToken'); // Supprime le token du localStorage
+        this.$router.push('/connexion'); // Redirige vers la page de connexion
+      }
+    }
+  }
+  </script>
+  
+  
+  <style scoped>
+div {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px; /* Un espace interne généreux pour une mise en page claire */
+  background-color: #f4f4f4; /* Fond homogène pour toute l'interface de gestion */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère pour un effet de profondeur subtil */
+}
+
+h1 {
+  text-align: center;
+  color: #005A9C; /* Bleu standard pour les titres, facile à lire et professionnel */
+  margin-bottom: 20px; /* Espace sous le titre pour délimiter clairement les sections */
+}
+
+.logout-button {
+  background-color: #ff4d4d; /* Rouge vif pour les actions critiques comme la déconnexion */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right; /* Alignement à droite pour signifier l'action de sortie */
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f; /* Rouge plus sombre au survol pour un feedback visuel */
+}
+
+div > div {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e9ecef; /* Fond légèrement différencié pour distinguer les différentes sections */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4CAF50; /* Vert pour les actions de gestion courante, indiquant la modification */
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #388E3C; /* Vert plus sombre pour le survol */
+}
+
+.delete-button {
+  background-color: #f44336; /* Rouge pour les suppressions, signalant une action plus définitive */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Rouge plus sombre pour le survol */
+}
+
+.form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.input, .select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0056b3; /* Bleu pour les boutons de soumission */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #004494; /* Bleu plus sombre au survol, pour un feedback immédiat */
+}
+</style>
+
+  
