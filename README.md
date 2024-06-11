@@ -18,7 +18,7 @@ L'objectif principal de ce projet est de créer un serveur web robuste et perfor
 
 1. Clonez le repository.
 2. Installez les dépendances avec `npm install`.
-3. Lancez le serveur de développement avec `npm run serve`.
+3. Lancez le serveur de développement avec `npm run dev`.
 
 ## Contributions et Remarques 🤝
 
